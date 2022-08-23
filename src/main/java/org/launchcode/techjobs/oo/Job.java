@@ -33,6 +33,17 @@ public class Job {
     //  match.
 
     @Override
+    public String toString() {
+        if (name.isBlank()){
+            name = "Data not available";
+        }
+
+        return '\n' + "ID: " + this.getId() + '\n' + "Name: "  + this.name + '\n' + "Employer: " +
+                this.employer + '\n' + "Location: " + this.location + '\n' + "Position Type: " +
+                this.positionType + '\n' + "Core Competency: " + this.coreCompetency + '\n';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
